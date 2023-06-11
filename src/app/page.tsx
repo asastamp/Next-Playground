@@ -19,7 +19,7 @@ export default function Home() {
     <div>
       {image && (
         <Snowfall
-          radius={[10, 100]}
+          radius={[10, 50]}
           wind={[1, 10]}
           style={{ height: 1800 }}
           images={[image]}
