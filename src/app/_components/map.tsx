@@ -10,17 +10,19 @@ const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 const visitedCountry = [
   "Thailand",
   "Japan",
-  "Myanmar",
+  "Laos",
   "United States of America",
   "Bhutan",
   "India",
   "Taiwan",
+  "Malaysia",
+  "Singapore",
 ];
 
 const markers = [
   {
     markerOffsetX: 0,
-    markerOffsetY: 15,
+    markerOffsetY: 10,
     name: "Thailand",
     coordinates: [100.9925, 15.87],
   },
@@ -31,10 +33,10 @@ const markers = [
     coordinates: [138.2529, 36.2048],
   },
   {
-    markerOffsetX: 33,
-    markerOffsetY: -10,
-    name: "Myanmar",
-    coordinates: [95.956, 21.9162],
+    markerOffsetX: 0,
+    markerOffsetY: -30,
+    name: "Laos",
+    coordinates: [102.4955, 19.8563],
   },
   {
     markerOffsetX: 0,
@@ -59,6 +61,18 @@ const markers = [
     markerOffsetY: 15,
     name: "Taiwan (Upcoming)",
     coordinates: [121.597366, 25.105497],
+  },
+  {
+    markerOffsetX: 35,
+    markerOffsetY: -10,
+    name: "Malaysia",
+    coordinates: [101.9758, 4.2105],
+  },
+  {
+    markerOffsetX: 20,
+    markerOffsetY: 15,
+    name: "Singapore",
+    coordinates: [103.8198, 1.3521],
   },
 ] as {
   markerOffsetX: number;
