@@ -57,7 +57,7 @@ const markers = [
   {
     markerOffsetX: 0,
     markerOffsetY: 15,
-    name: "Taiwan",
+    name: "Taiwan (Upcomming)",
     coordinates: [121.597366, 25.105497],
   },
 ];
