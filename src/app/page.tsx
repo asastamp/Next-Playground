@@ -17,7 +17,14 @@ export default function Home() {
 
   return (
     <div>
-      {image && <Snowfall radius={[30, 30]} images={[image]} />}
+      {image && (
+        <Snowfall
+          radius={[10, 100]}
+          wind={[1, 10]}
+          style={{ height: 1800 }}
+          images={[image]}
+        />
+      )}
       <MainMenu />
       <Map />
     </div>
