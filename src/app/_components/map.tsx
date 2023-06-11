@@ -14,13 +14,51 @@ const visitedCountry = [
   "United States of America",
   "Bhutan",
   "India",
+  "Taiwan",
 ];
 
 const markers = [
   {
-    markerOffset: -30,
+    markerOffsetX: 0,
+    markerOffsetY: 15,
     name: "Thailand",
-    coordinates: [101, 165],
+    coordinates: [100.9925, 15.87],
+  },
+  {
+    markerOffsetX: 0,
+    markerOffsetY: 15,
+    name: "Japan",
+    coordinates: [138.2529, 36.2048],
+  },
+  {
+    markerOffsetX: 33,
+    markerOffsetY: -10,
+    name: "Myanmar",
+    coordinates: [95.956, 21.9162],
+  },
+  {
+    markerOffsetX: 0,
+    markerOffsetY: -30,
+    name: "Bhutan",
+    coordinates: [90.4336, 27.5142],
+  },
+  {
+    markerOffsetX: 0,
+    markerOffsetY: -30,
+    name: "India",
+    coordinates: [78.9629, 20.5937],
+  },
+  {
+    markerOffsetX: 0,
+    markerOffsetY: 15,
+    name: "United States of America",
+    coordinates: [-95.7129, 37.0902],
+  },
+  {
+    markerOffsetX: 0,
+    markerOffsetY: 15,
+    name: "Taiwan",
+    coordinates: [121.597366, 25.105497],
   },
 ];
 
@@ -39,7 +77,7 @@ export default function Map() {
             })
           }
         </Geographies>
-        {markers.map(({ name, coordinates, markerOffset }) => (
+        {markers.map(({ name, coordinates, markerOffsetX, markerOffsetY }) => (
           <Marker key={name} coordinates={coordinates}>
             <g
               fill="none"
@@ -54,8 +92,13 @@ export default function Map() {
             </g>
             <text
               textAnchor="middle"
-              y={markerOffset}
-              style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
+              x={markerOffsetX}
+              y={markerOffsetY}
+              style={{
+                fontFamily: "lato",
+                fill: "#5D5A6D",
+                fontSize: "0.7rem",
+              }}
             >
               {name}
             </text>
