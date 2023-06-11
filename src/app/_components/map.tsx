@@ -55,17 +55,24 @@ const markers = [
     coordinates: [-95.7129, 37.0902],
   },
   {
-    markerOffsetX: 0,
+    markerOffsetX: 20,
     markerOffsetY: 15,
-    name: "Taiwan (Upcomming)",
+    name: "Taiwan (Upcoming)",
     coordinates: [121.597366, 25.105497],
   },
-];
+] as {
+  markerOffsetX: number;
+  markerOffsetY: number;
+  name: string;
+  coordinates: [number, number];
+}[];
 
 export default function Map() {
   return (
     <section className="font-lato bg-white md:container md:mt-5 md:px-10 md:pt-10 md:text-center md:mx-auto border-t-3 border-t-lime-900">
-      <h1 className="text-2xl font-bold md:text-6xl">Mint Go Abroad</h1>
+      <h1 className="text-2xl font-bold text-center md:text-6xl">
+        Mint Go Abroad
+      </h1>
       <ComposableMap>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
