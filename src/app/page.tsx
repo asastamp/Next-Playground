@@ -4,14 +4,20 @@ import Snowfall from "react-snowfall";
 
 import MainMenu from "./_components/main-menu";
 import Map from "./_components/map";
-
-const snowflake1 = document.createElement("img");
-snowflake1.src = "/hero/stamp.png";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [image, setImage] = useState();
+
+  useEffect(() => {
+    const snowflake1 = document.createElement("img");
+    snowflake1.src = "/hero/stamp.png";
+    setImage(snowflake1 as any);
+  });
+
   return (
     <div>
-      <Snowfall radius={[30, 30]} images={[snowflake1]} />
+      {image && <Snowfall radius={[30, 30]} images={[image]} />}
       <MainMenu />
       <Map />
     </div>
