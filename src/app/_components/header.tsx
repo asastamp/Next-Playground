@@ -19,7 +19,7 @@ export default function Header() {
         <div className="flex items-center">
           <li className="flex space-x-5 mr-2 md:mr-0 md:space-x-20">
             <ul className="hover:text-[#142210]">
-              <a href="#go-abroad">Work Abroad</a>
+              <a href="#work-abroad">Work Abroad</a>
             </ul>
             <ul className="hover:text-[#142210]">
               <a href="#chat">Chat</a>

@@ -83,52 +83,58 @@ const markers = [
 
 export default function Map() {
   return (
-    <section
-      id="go-abroad"
-      className="font-lato bg-white md:container md:mt-5 md:px-10 md:pt-10 md:text-center md:mx-auto border-t-3 border-t-lime-900"
-    >
-      <h1 className="text-2xl font-bold text-center md:text-6xl">
-        Mint Go Abroad
-      </h1>
-      <ComposableMap>
-        <Geographies geography={geoUrl}>
-          {({ geographies }) =>
-            geographies.map((geo) => {
-              const fill = visitedCountry.includes(geo.properties.name)
-                ? "#98FB98"
-                : "#EAEAEC";
-              return <Geography key={geo.rsmKey} geography={geo} fill={fill} />;
-            })
-          }
-        </Geographies>
-        {markers.map(({ name, coordinates, markerOffsetX, markerOffsetY }) => (
-          <Marker key={name} coordinates={coordinates}>
-            <g
-              fill="none"
-              stroke="#FF5533"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              transform="translate(-12, -24)"
-            >
-              <circle cx="12" cy="10" r="3" />
-              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
-            </g>
-            <text
-              textAnchor="middle"
-              x={markerOffsetX}
-              y={markerOffsetY}
-              style={{
-                fontFamily: "lato",
-                fill: "#5D5A6D",
-                fontSize: "0.7rem",
-              }}
-            >
-              {name}
-            </text>
-          </Marker>
-        ))}
-      </ComposableMap>
+    <section id="work-abroad">
+      <div className=" bg-green-500 text-white pt-5 md:px-12 md:pt-14">
+        <h1 className="text-xl font-bold text-center md:text-6xl">
+          <span className="text-[#ffcfcf]">Mint</span>
+          <span className="text-[#eaeaea]"> Work Abroad</span>
+        </h1>
+        <div className="w-[300px] mx-auto md:w-[600px] lg:w-[900px]">
+          <ComposableMap>
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => {
+                  const fill = visitedCountry.includes(geo.properties.name)
+                    ? "#98FB98"
+                    : "#EAEAEC";
+                  return (
+                    <Geography key={geo.rsmKey} geography={geo} fill={fill} />
+                  );
+                })
+              }
+            </Geographies>
+            {markers.map(
+              ({ name, coordinates, markerOffsetX, markerOffsetY }) => (
+                <Marker key={name} coordinates={coordinates}>
+                  <g
+                    fill="none"
+                    stroke="#FF5533"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    transform="translate(-12, -24)"
+                  >
+                    <circle cx="12" cy="10" r="3" />
+                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+                  </g>
+                  <text
+                    textAnchor="middle"
+                    x={markerOffsetX}
+                    y={markerOffsetY}
+                    style={{
+                      fontFamily: "lato",
+                      fill: "#5D5A6D",
+                      fontSize: "0.7rem",
+                    }}
+                  >
+                    {name}
+                  </text>
+                </Marker>
+              )
+            )}
+          </ComposableMap>
+        </div>
+      </div>
     </section>
   );
 }
