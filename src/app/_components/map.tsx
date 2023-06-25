@@ -83,7 +83,10 @@ const markers = [
 
 export default function Map() {
   return (
-    <section className="font-lato bg-white md:container md:mt-5 md:px-10 md:pt-10 md:text-center md:mx-auto border-t-3 border-t-lime-900">
+    <section
+      id="go-abroad"
+      className="font-lato bg-white md:container md:mt-5 md:px-10 md:pt-10 md:text-center md:mx-auto border-t-3 border-t-lime-900"
+    >
       <h1 className="text-2xl font-bold text-center md:text-6xl">
         Mint Go Abroad
       </h1>
