@@ -31,7 +31,7 @@ export default function Header() {
             href="https://www.linkedin.com/in/isariyaporn-kanta-6b2865243/"
             target="_blank"
           >
-            <button className="rounded-lg px-2 py-1 md:mr-16 border border-[#325527] hover:bg-[#325527] hover:text-white">
+            <button className="rounded-xl px-2 py-1 md:mr-16 border border-[#325527] hover:bg-[#325527] hover:text-white">
               Contact Me
             </button>
           </a>

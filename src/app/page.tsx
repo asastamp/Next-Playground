@@ -2,19 +2,20 @@
 
 import Snowfall from "react-snowfall";
 
-import MainMenu from "./_components/main-menu";
+import Header from "./_components/header";
+import Hero from "./_components/hero";
 import Map from "./_components/map";
 import Chat from "./_components/chat";
-import Header from "./_components/header";
 
 export default function Home() {
   return (
     <div>
-      <Snowfall style={{ height: 1800 }} />
       <Header />
-      <MainMenu />
+      <Hero />
       <Map />
       <Chat />
+
+      <Snowfall />
     </div>
   );
 }
