@@ -86,8 +86,8 @@ export default function Map() {
     <section id="work-abroad">
       <div className=" bg-green-500 text-white pt-5 md:px-12 md:pt-14">
         <h1 className="text-xl font-bold text-center md:text-6xl">
-          <span className="text-[#ffcfcf]">Mint</span>
-          <span className="text-[#eaeaea]"> Work Abroad</span>
+          <span className="text-[#ffcfcf]">MINT</span>
+          <span className="text-[#eaeaea]"> WORK ABROAD</span>
         </h1>
         <div className="w-[300px] mx-auto md:w-[600px] lg:w-[900px]">
           <ComposableMap>
