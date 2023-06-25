@@ -10,13 +10,13 @@ export default function Header() {
             <Image src="/icon.png" alt="logo" width={60} height={60} />
           </Link>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mr-4">
           <li className="flex space-x-10">
             <ul>
               <a href="#go-abroad">WORK</a>
             </ul>
             <ul>
-              <a>CHAT</a>
+              <a href="#chat">CHAT</a>
             </ul>
           </li>
         </div>
