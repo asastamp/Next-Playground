@@ -17,12 +17,12 @@ export default function Chat() {
 
   return (
     <section id="chat">
-      <div className="h-[600px] bg-white mx-2 pt-5 md:px-12 md:pt-14 md:text-center md:mx-auto">
+      <div className="h-[500px] bg-white mx-2 mb-5 pt-5 md:h-[600px] md:px-12 md:pt-14 md:text-center md:mx-auto lg:h-[800px]">
         <h1 className="text-2xl font-bold text-center mb-10 md:text-6xl ">
           CHAT
         </h1>
 
-        <div className="message-box h-[300px] mb-10 overflow-scroll p-4 border border-green-500">
+        <div className="message-box h-[300px] mb-10 overflow-scroll p-4 border border-green-500 md:h-[500px]">
           {messages.map((m) => {
             if (m.role === "assistant") {
               return (
