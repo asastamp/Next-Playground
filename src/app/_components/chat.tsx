@@ -13,33 +13,16 @@ export default function Chat() {
     if (elem) {
       elem.scrollTop = elem.scrollHeight;
     }
-  }, []);
-
-  const onSubmit = (e: any) => {
-    handleSubmit(e);
-    const elem = document.querySelector(".message-box");
-    if (elem) {
-      elem.scrollTop = elem.scrollHeight;
-    }
-  };
+  }, [messages]);
 
   return (
     <section id="chat">
-      <div className="h-[500px] mb-10 font-lato bg-white md:container md:mt-5 md:px-10 md:pt-10 md:text-center md:mx-auto border-t-3 border-t-lime-900">
-        <h1 className="text-2xl font-bold text-center mb-4 md:text-6xl ">
-          Chat
+      <div className="h-[600px] bg-white mx-2 pt-5 md:px-12 md:pt-14 md:text-center md:mx-auto">
+        <h1 className="text-2xl font-bold text-center mb-10 md:text-6xl ">
+          CHAT
         </h1>
 
-        <form onSubmit={onSubmit} className="mb-4">
-          <input
-            value={input}
-            placeholder="มีอะไรจะถามแตมไหม?"
-            onChange={handleInputChange}
-            className="w-full focus:outline-none h-10 p-4  border-b-2 rounded-sm border-b-green-500"
-          />
-        </form>
-
-        <div className="message-box h-[300px] mb-10 overflow-scroll">
+        <div className="message-box h-[300px] mb-10 overflow-scroll p-4 border border-green-500">
           {messages.map((m) => {
             if (m.role === "assistant") {
               return (
@@ -49,7 +32,7 @@ export default function Chat() {
                 >
                   <div className="flex items-center">
                     <Image
-                      src="/hero/stamp.png"
+                      src="/chat/mint.png"
                       alt="stamp"
                       className="rounded-full mr-5"
                       width={30}
@@ -68,14 +51,22 @@ export default function Chat() {
                 key={m.id}
                 className="flex justify-end items-center mb-4 text-right"
               >
-                <div className="rounded-full mr-5">You:</div>{" "}
                 <div className="bg-slate-200 max-w-xl p-4 rounded-md">
                   {m.content}{" "}
                 </div>
+                <div className="rounded-full ml-5 font-bold">You</div>
               </div>
             );
           })}
         </div>
+        <form onSubmit={handleSubmit} className="mb-4">
+          <input
+            value={input}
+            placeholder="Ask me something?"
+            onChange={handleInputChange}
+            className="w-full focus:outline-none h-10 p-4  border-b-2 rounded-sm border-b-green-500"
+          />
+        </form>
       </div>
     </section>
   );

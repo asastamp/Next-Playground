@@ -22,7 +22,7 @@ export default function Hero() {
             </button>
           </a>
         </div>
-        <div className="h-[250px] md:[400px] lg:w-1/2 lg:h-[700px]">
+        <div className="h-[250px] md:h-[400px] md:w-1/2 lg:h-[700px]">
           <div className="hero-image bg-no-repeat bg-contain h-full bg-center md:bg-cover"></div>
         </div>
       </div>

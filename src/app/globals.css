@@ -10,7 +10,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url("/hero/background.jpg");
 }
 
 .hero-image {
